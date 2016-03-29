@@ -1,7 +1,1 @@
-var initsJS = true;
-if (initsJS) {
-	initsJS = '1';
-	console.log(initsJS);
-}
-// ./partials/expand.js
-// ./partials/modal.js
+var initsJS=!0;initsJS&&(initsJS="1",console.log(initsJS));

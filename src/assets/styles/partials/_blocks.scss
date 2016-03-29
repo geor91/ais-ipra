@@ -1,0 +1,84 @@
+// SITE LOGO
+	.site-logo {
+		@include rem(padding-left, $logo-size);
+		@include rem(height, $logo-size);
+	}
+		.site-logo_single {
+			@include rem(height, $logo-size-lg);
+
+			.site-logo__title {
+				line-height: 1.4;
+			}
+		}
+		.site-logo__image {
+			position: absolute;
+			top: 0;
+			bottom: -2px;
+			left: 0;
+			@include rem(min-width, $logo-size);
+			background: $color-green-1 url('../images/logo.png') no-repeat center;
+			cursor: pointer;
+			transition: background-color .3s, box-shadow .3s;
+
+			&:hover {
+				background-color: darken($color-green-1, 5%);
+			}
+			&:active {
+				background-color: darken($color-green-1, 10%);
+				box-shadow: inset -2px -2px 5px rgba(0,0,0, .2);
+			}
+		}
+
+		.site-logo__title {
+			display: table-cell;
+			@include rem(padding, 0 40px);
+			@include font-family('hn');
+			@include rem(font-size, 28px);
+			line-height: 1.2;
+			vertical-align: middle;
+			color: $color-green-1;
+
+			a {
+				text-decoration: none;
+				&:hover {
+					color: darken($color-green-1, 10%);
+				}
+			}
+		}
+// ---------
+
+// USER AREA
+	.user-area {
+		i[class*="icon-"] {
+			@include rem(font-size, 25px);
+			color: $color-green-1;
+			margin-left: 20px;
+			transition: color .3s;
+		}
+	}
+		.user-area__name {
+			@include rem(font-size, 20px);
+			color: transparentize(#000, .7);
+			transition: color .3s;
+
+			&:hover,
+			&:focus {
+				color: $color-gray-1;
+				text-decoration: none;
+
+				i[class*="icon-"] {
+					color: darken($color-green-1, 15%);
+				}
+			}
+		}
+// ----------
+
+// LOGIN PAGE
+	.login-form {
+		width: 600px;
+		@include font-family(hn);
+		@extend .box-panel;
+	}
+		.login-form__body {
+			@include rem(padding, 60px);
+		}

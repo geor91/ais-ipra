@@ -1,0 +1,36 @@
+html, 
+body,
+.main-wrap,
+.main-container {
+	height: 100%;
+}
+body {
+	background-color: $color-green-1;
+	background-image: linear-gradient($color-green-1 0%, $color-green-3 100%);
+	@include font-family(os400);
+}
+.main-wrap {
+	@include rem(padding, 40px);
+	@extend .centered-content;
+	text-align: center;
+
+	> * {
+		text-align: left;
+	}
+}
+
+.main-container {
+	position: relative;
+	width: 100%;
+	max-width: 1500px;
+	overflow: hidden;
+	@extend .box-panel;
+}
+
+.content {
+	padding: 20px;
+	h1 {
+		font-weight: normal;
+		margin-bottom: 20px;
+	}
+}
