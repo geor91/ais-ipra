@@ -1,10 +1,25 @@
-html, 
+html {
+	@include viewport('max-width: 1300px') {
+		font-size: 9px;
+	}
+	// @include viewport('max-width: 992px') {
+	// 	font-size: 8px;
+	// }
+	// @include viewport('max-width: 768px') {
+	// 	// font-size: 7px;
+	// }
+	// @include viewport('max-width: 480px') {
+	// 	font-size: 7px;
+	// }
+}
+html,
 body,
 .main-wrap,
 .main-container {
 	height: 100%;
 }
 body {
+	min-width: 1024px;
 	background-color: $color-green-1;
 	background-image: linear-gradient($color-green-1 0%, $color-green-3 100%);
 	@include font-family(os400);
@@ -27,10 +42,51 @@ body {
 	@extend .box-panel;
 }
 
-.content {
-	padding: 20px;
-	h1 {
-		font-weight: normal;
-		margin-bottom: 20px;
+.main-content {
+	position: absolute;
+	@include rem(top, $header-height);
+	bottom: 0;
+	width: 100%;
+	white-space: nowrap;
+	transition: transform .3s;
+	@include cols();
+
+	& > * {
+		white-space: normal;
 	}
 }
+	.main-content_scrolled {
+		transform: translate(-100%);
+	}
+	.main-content_tile {
+		white-space: normal;
+	}
+
+.page {
+	width: 100%;
+	height: 100%;
+	@include rem(padding, 30px 0);
+	@include cols();
+}
+.page__sidebar {
+	width: 25%;
+	min-width: 250px;
+	height: 100%;
+	@include rem(padding, 0 40px);
+	border-right: 1px solid $color-gray-3;
+	overflow: auto;
+}
+.page__content {
+	width: 100%;
+	height: 100%;
+	@include rem(padding, 0 40px);
+	overflow: auto;
+}
+	.page__sidebar + .page__content {
+		width: 75%;
+	}
+
+	.page__content + .page__sidebar {
+		border-right: 0;
+		border-left: 1px solid $color-gray-3;
+	}

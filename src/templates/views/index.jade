@@ -1,5 +1,24 @@
 extends ../layouts/default.jade
 block content
-	.content
-		h1 Content
-		p Lorem ipsum dolor sit amet, consectetur adipisicing elit. Odit repudiandae nisi rerum ipsam molestiae quisquam at ea temporibus accusamus ex?
+	.page#page1
+		.page__sidebar
+			nav.site-navbar
+				ul
+					li.active: a(href="#") Входящие
+						ul
+							li: a(href="#") Новые
+							li.active: a(href="#") Выписки из индивидуальной программы реабилитации
+					li: a(href="#") Исходящие документы
+						ul
+							li: a(href="#") Информация об исполнении
+					li: a(href="#") Дополнительно
+						ul
+							li: a(href="#") Архив
+							li: a(href="#") Учетные записи
+							li: a(href="#") Настройки
+		.page__content
+			h1 page 1
+
+	.page#page2
+		.page__content
+			h1 page 2

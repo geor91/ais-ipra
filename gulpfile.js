@@ -33,38 +33,38 @@
 
 /* ------------ CONFIGS ------------ */ 
 	var paths = {
-		root: './build',
+		root: 'build',
 		src: {
-			images: './src/assets/images/**/*.*',
-			fonts: './src/assets/fonts/**/*.*',
-			styles: './src/assets/styles/*.scss',
-			scripts: './src/assets/scripts/*.js',
+			images: 'src/assets/images/**/*.*',
+			fonts: 'src/assets/fonts/**/*.*',
+			styles: 'src/assets/styles/*.scss',
+			scripts: 'src/assets/scripts/*.js',
 			templates: {
-				all: './src/templates/**/[^_]*.jade',
-				views: './src/templates/views/*.jade'
+				all: 'src/templates/**/[^_]*.jade',
+				views: 'src/templates/views/*.jade'
 			}
 		},
 		build: {
-			images: './build/assets/images',
-			fonts: './build/assets/fonts',
-			styles: './build/assets/styles',
-			scripts: './build/assets/scripts',
+			images: 'build/assets/images',
+			fonts: 'build/assets/fonts',
+			styles: 'build/assets/styles',
+			scripts: 'build/assets/scripts',
 			templates: {
-				all: './build/templates',
-				views: './build'
+				all: 'build/templates',
+				views: 'build'
 			}
 		},
 		watch: {
-			images: './src/assets/images/**/*.*',
-			fonts: './src/assets/fonts/**/*.*',
-			styles: './src/assets/styles/**/*.*',
-			scripts: './src/assets/scripts/**/*.*',
-			templates: './src/templates/**/*.*'
+			images: 'src/assets/images/**/*.*',
+			fonts: 'src/assets/fonts/**/*.*',
+			styles: 'src/assets/styles/**/*.*',
+			scripts: 'src/assets/scripts/**/*.*',
+			templates: 'src/templates/**/*.*'
 		},
 	};
 	var serverConfig= {
 		server: {
-			baseDir: "./build/",
+			baseDir: "build/",
 			open: false
 		}
 	}

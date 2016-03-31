@@ -1,10 +1,9 @@
 header {
-	display: block;
-	position: relative;
+	position: absolute;
+	top: 0;
+	left: 0;
 	@include table($valign: middle);
-	height: $header-height;
-	line-height: $header-height;
-	border-bottom: 2px solid $color-gray-4;
+	@include rem(height, $header-height);
 	@include font-family('os400');
 
 	.user-area {

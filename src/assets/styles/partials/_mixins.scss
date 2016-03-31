@@ -70,3 +70,21 @@
 			vertical-align: $valign;
 		}
 	}
+
+// BREAKPOINTS
+	@mixin viewport ($value) {
+		@media only screen and ($value) {
+			@content;
+		}
+	}
+
+// COLUMNS WRAP MIXIN
+	@mixin cols () {
+		font-size: 0;
+
+		& > * {
+			display: inline-block;
+			vertical-align: top;
+			font-size: 1.6rem;
+		}
+	}
