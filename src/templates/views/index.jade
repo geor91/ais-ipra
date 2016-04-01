@@ -4,14 +4,20 @@ block content
 		.page__sidebar
 			nav.site-navbar
 				ul
-					li.active: a(href="#") Входящие
+					li.nav-section
+						.nav-section__title Входящие
 						ul
-							li: a(href="#") Новые
-							li.active: a(href="#") Выписки из индивидуальной программы реабилитации
-					li: a(href="#") Исходящие документы
-						ul
-							li: a(href="#") Информация об исполнении
-					li: a(href="#") Дополнительно
+							li
+								a(href="#") Новые
+								li
+									a.active(href="#") Выписки из индивидуальной программы реабилитации
+
+					li.nav-section
+						.nav-section__title Исходящие документы
+						ul: li: a(href="#") Информация об исполнении
+
+					li.nav-section
+						.nav-section__title Дополнительно
 						ul
 							li: a(href="#") Архив
 							li: a(href="#") Учетные записи

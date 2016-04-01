@@ -1,3 +1,54 @@
+$navbar-submenu-padding: $content-padding + $navbar-submenu-padding;
+
 .site-navbar {
-	
+	@include rem(margin, 0 (-$content-padding));
+	@include font-family(os400);
+
+	ul {
+		list-style: none;
+		padding-left: 0;
+		ul {
+			@include rem(margin-top, 6px);
+		}
+	}
+
+	li {
+		position: relative;
+		@include rem(font-size, 20px);
+		color: $color-gray-2;
+
+		li {
+			position: relative;
+			@include rem(font-size, 21px);
+			line-height: 1.15;
+			color: $color-green-2;
+
+			> a {
+				display: block;
+				@include rem(padding, 10px $content-padding 10px $navbar-submenu-padding);
+				border-left: 8px solid #fff;
+				border-left: .8rem solid #fff;
+				transition: background .3s, border-color .3s;
+
+				&:hover,
+				&:focus,
+				&.active {
+					text-decoration: none;
+					background-color: $color-gray-5;
+					border-color: $color-gray-2;
+				}
+				&.active {
+					cursor: default;
+					background-color: $color-gray-6;
+					border-color: $color-gray-3;
+				}
+			}
+		}
+	}
+}
+.nav-section__title {
+	@include rem(padding-left, $content-padding);
+}
+.nav-section {
+	@include rem(margin-bottom, 25px);
 }
