@@ -1,8 +1,8 @@
 // SITE LOGO
 	.site-logo {
 		@include table($valign: middle);
-		// @include rem(padding-left, $logo-size);
 		@include rem(min-height, $logo-size);
+		border-top-left-radius: $panel-bd-radius;		
 		overflow: hidden;
 	}
 		.site-logo_large {
@@ -78,7 +78,6 @@
 	.login-form {
 		width: 600px;
 		@include font-family(hn);
-		overflow: hidden;
 		@extend .box-panel;
 	}
 		.login-form__body {

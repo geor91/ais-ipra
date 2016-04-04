@@ -224,8 +224,8 @@ i[class*="icon-"] {
 
 .box-panel, .main-container, .login-form {
   background: #fff;
-  -webkit-border-radius: 7px;
-          border-radius: 7px;
+  -webkit-border-radius: 10px 7px 7px 7px;
+          border-radius: 10px 7px 7px 7px;
   -webkit-box-shadow: 0 0 20px 1px rgba(0, 0, 0, 0.15);
           box-shadow: 0 0 20px 1px rgba(0, 0, 0, 0.15); }
 
@@ -4132,8 +4132,7 @@ body {
 .main-container {
   position: relative;
   width: 100%;
-  max-width: 1500px;
-  overflow: hidden; }
+  max-width: 1500px; }
 
 .main-content {
   position: absolute;
@@ -4147,6 +4146,7 @@ body {
   -o-transition: transform .3s, -o-transform .3s;
   transition: transform .3s;
   transition: transform .3s, -webkit-transform .3s, -o-transform .3s;
+  overflow: hidden;
   font-size: 0; }
   .main-content > * {
     display: inline-block;
@@ -4313,6 +4313,8 @@ header {
   width: 100%;
   min-height: 120px;
   min-height: 12rem;
+  -webkit-border-top-left-radius: 7px;
+          border-top-left-radius: 7px;
   overflow: hidden; }
   .site-logo > * {
     display: table-cell;
@@ -4384,8 +4386,7 @@ header {
 
 .login-form {
   width: 600px;
-  font-family: hn, arial, serif;
-  overflow: hidden; }
+  font-family: hn, arial, serif; }
 
 .login-form__body {
   padding: 60px;

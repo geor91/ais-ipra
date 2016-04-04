@@ -1,5 +1,5 @@
 .box-panel {
 	background: #fff;
-	border-radius: 7px;
+	border-radius: ($panel-bd-radius + 3px) $panel-bd-radius $panel-bd-radius $panel-bd-radius;
 	box-shadow: 0 0 20px 1px rgba(0,0,0, .15);
 }
