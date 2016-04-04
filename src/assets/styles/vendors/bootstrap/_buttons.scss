@@ -47,7 +47,7 @@
   &[disabled],
   fieldset[disabled] & {
     cursor: $cursor-disabled;
-    @include opacity(.65);
+    @include opacity(.5);
     @include box-shadow(none);
   }
 
@@ -86,6 +86,11 @@ a.btn {
 // Danger and error appear as red
 .btn-danger {
   @include button-variant($btn-danger-color, $btn-danger-bg, $btn-danger-border);
+}
+
+.btn-round {
+  border-radius: 0 !important;
+  border: none;
 }
 
 
@@ -165,4 +170,9 @@ input[type="button"] {
   &.btn-block {
     width: 100%;
   }
+}
+
+// icons line height fix
+.btn i[class*="icon-"] {
+  line-height: 1.2;
 }

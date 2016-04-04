@@ -88,3 +88,24 @@
 			font-size: 1.6rem;
 		}
 	}
+
+// VERTICAL ALIGN MIXIN
+	@mixin v-align ($value: middle) {
+		// position: relative;
+		overflow: auto;
+		font-size: 0;
+
+		&:before {
+			content: "";
+			display: inline-block;
+			height: 100%;
+			width: 1px;
+			vertical-align: $value;
+			margin-right: -1px;
+		}
+		& > * {
+			display: inline-block;
+			vertical-align: $value;
+			@include rem(font-size, 16px);
+		}
+	}

@@ -15,12 +15,10 @@ $navbar-submenu-padding: $content-padding + $navbar-submenu-padding;
 	li {
 		position: relative;
 		@include rem(font-size, 20px);
+		line-height: 1.15;
 		color: $color-gray-2;
 
 		li {
-			position: relative;
-			@include rem(font-size, 21px);
-			line-height: 1.15;
 			color: $color-green-2;
 
 			> a {

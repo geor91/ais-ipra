@@ -32,9 +32,10 @@ legend {
 label {
   display: inline-block;
   max-width: 100%; // Force IE8 to wrap long content (see https://github.com/twbs/bootstrap/issues/13141)
-  margin-bottom: 5px;
+  margin-bottom: 2px;
   // font-weight: bold;
   font-size: 12px;
+  @include font-family(hn);
   color: $color-gray-0;
 }
 
@@ -116,9 +117,9 @@ output {
 .form-control {
   display: block;
   width: 100%;
-  height: $input-height-base; // Make inputs at least the height of their button counterpart (base line-height + padding + border)
-  padding: $padding-base-vertical $padding-base-horizontal;
-  font-size: $font-size-base;
+  @include rem(height, $input-height-base); // Make inputs at least the height of their button counterpart (base line-height + padding + border)
+  @include rem(padding, $padding-base-vertical $padding-base-horizontal);
+  @include rem(font-size, $font-size-base);
   line-height: $line-height-base;
   color: $input-color;
   background-color: $input-bg;
@@ -359,14 +360,14 @@ input[type="checkbox"] {
 @include input-size('.input-lg', $input-height-large, $padding-large-vertical, $padding-large-horizontal, $font-size-large, $line-height-large, $input-border-radius-large);
 .form-group-lg {
   .form-control {
-    height: $input-height-large;
-    padding: $padding-large-vertical $padding-large-horizontal;
-    font-size: $font-size-large;
+    @include rem(height, $input-height-large);
+    @include rem(padding, $padding-large-vertical $padding-large-horizontal);
+    @include rem(font-size, $font-size-large);
     line-height: $line-height-large;
     border-radius: $input-border-radius-large;
   }
   select.form-control {
-    height: $input-height-large;
+    @include rem(height, $input-height-large);
     line-height: $input-height-large;
   }
   textarea.form-control,
@@ -374,12 +375,17 @@ input[type="checkbox"] {
     height: auto;
   }
   .form-control-static {
-    height: $input-height-large;
-    min-height: ($line-height-computed + $font-size-large);
-    padding: ($padding-large-vertical + 1) $padding-large-horizontal;
-    font-size: $font-size-large;
+    @include rem(height, $input-height-large);
+    @include rem(min-height, ($line-height-computed + $font-size-large));
+    @include rem(padding, ($padding-large-vertical + 1) $padding-large-horizontal);
+    @include rem(font-size, $font-size-large);
     line-height: $line-height-large;
   }
+}
+
+// form group without label (only button div)
+.form-group-action {
+  vertical-align: bottom;
 }
 
 

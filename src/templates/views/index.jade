@@ -22,9 +22,43 @@ block content
 							li: a(href="#") Архив
 							li: a(href="#") Учетные записи
 							li: a(href="#") Настройки
+
 		.page__content
-			h1 page 1
+			.page__header
+				h2.page__title Выписки из индивидуальной программы реабилитации (38)
+				.filter.row
+					.col-md-4
+						.row.row-union
+							.col-md-6.form-group.form-group-lg
+								label(for="dateStart") Дата с
+								input.form-control(type="text", id="dateStart", tabindex="100")
+							.col-md-6.form-group.form-group-lg
+								label(for="dateEnd") По
+								input.form-control(type="text", id="dateEnd", tabindex="101")
+					.col-md-5.col-sm-4.form-group.form-group-lg
+						label(for="userFio") ФИО
+						input.form-control(type="text", id="userFio", tabindex="102")
+					.col-md-2.form-group.form-group-lg
+						label(for="userSex") Пол
+						input.form-control(type="text", id="userSex", tabindex="103")
+					.col-md-1.col-sm-2.form-group.form-group-action.text-right
+						button.btn.btn-primary.btn-lg.btn-block(tabindex="104")
+							i.icon-search
+			.page__body
+				- for (var i=0; i<24; i++)
+					p body <br>
+			.page__footer
+				.text-right
+					button.btn.btn-primary.btn-lg.btn-round(disabled)
+						i.icon-arrow-left
+					button.btn.btn-primary.btn-lg.btn-round
+						i.icon-arrow-right
 
 	.page#page2
 		.page__content
-			h1 page 2
+			.page__header
+				h1 page 2
+			.page__body
+				p body
+			.page__footer
+				p footer
