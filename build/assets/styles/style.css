@@ -19,7 +19,9 @@
   src: url("../fonts/open-sans-400/font.eot#iefix");
   src: url("../fonts/open-sans-400/font.eot") format("embedded-opentype"), url("../fonts/open-sans-400/font.ttf") format("truetype"), url("../fonts/open-sans-400/font.woff") format("woff"), url("../fonts/open-sans-400/font.woff2") format("woff2"), url("../fonts/open-sans-400/font.svg") format("svg"); }
 
-i[class*="icon-"] {
+[class*="icon-"] {
+  background: none;
+  border: 0;
   font-family: "icons" !important;
   font-style: normal;
   font-weight: normal;
@@ -29,198 +31,44 @@ i[class*="icon-"] {
   speak: none;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale; }
-
-.icon-arrow-up:before {
-  content: "\e877"; }
-
-.icon-arrow-down:before {
-  content: "\e878"; }
+  [class*="icon-"].icon-bordered {
+    padding: 2px 4px 3px 3px;
+    border: 1px solid;
+    -webkit-border-radius: 3px;
+            border-radius: 3px; }
 
 .icon-arrow-left:before {
-  content: "\e879"; }
-
-.icon-arrow-right:before {
-  content: "\e87a"; }
-
-.icon-arrow-up-circle:before {
-  content: "\e883"; }
-
-.icon-arrow-down-circle:before {
-  content: "\e884"; }
-
-.icon-arrow-left-circle:before {
-  content: "\e885"; }
-
-.icon-arrow-right-circle:before {
-  content: "\e886"; }
-
-.icon-bubble:before {
-  content: "\e83f"; }
-
-.icon-calendar:before {
-  content: "\e836"; }
-
-.icon-checkmark-circle:before {
-  content: "\e87f"; }
-
-.icon-chevron-up:before {
-  content: "\e873"; }
-
-.icon-chevron-down:before {
-  content: "\e874"; }
-
-.icon-chevron-left:before {
-  content: "\e875"; }
-
-.icon-chevron-right:before {
-  content: "\e876"; }
-
-.icon-chevron-up-circle:before {
-  content: "\e887"; }
-
-.icon-chevron-down-circle:before {
-  content: "\e888"; }
-
-.icon-chevron-left-circle:before {
-  content: "\e889"; }
-
-.icon-chevron-right-circle:before {
-  content: "\e88a"; }
-
-.icon-circle-minus:before {
-  content: "\e882"; }
-
-.icon-cog:before {
-  content: "\e810"; }
-
-.icon-crop:before {
-  content: "\e88b"; }
-
-.icon-cross:before {
-  content: "\e870"; }
-
-.icon-cross-circle:before {
-  content: "\e880"; }
-
-.icon-download:before {
-  content: "\e865"; }
-
-.icon-envelope:before {
-  content: "\e818"; }
-
-.icon-eye:before {
-  content: "\e81b"; }
-
-.icon-file-add:before {
-  content: "\e81e"; }
-
-.icon-file-empty:before {
-  content: "\e81d"; }
-
-.icon-frame-expand:before {
-  content: "\e88c"; }
-
-.icon-frame-contract:before {
-  content: "\e88d"; }
-
-.icon-home:before {
-  content: "\e800"; }
-
-.icon-link:before {
-  content: "\e86b"; }
-
-.icon-list:before {
-  content: "\e872"; }
-
-.icon-lock:before {
-  content: "\e80f"; }
-
-.icon-map-marker:before {
-  content: "\e833"; }
-
-.icon-menu:before {
-  content: "\e871"; }
-
-.icon-move:before {
-  content: "\e87b"; }
-
-.icon-paperclip:before {
-  content: "\e819"; }
-
-.icon-pencil:before {
-  content: "\e802"; }
-
-.icon-phone:before {
-  content: "\e831"; }
-
-.icon-phone-handset:before {
-  content: "\e830"; }
-
-.icon-plus-circle:before {
-  content: "\e881"; }
-
-.icon-printer:before {
-  content: "\e81c"; }
-
-.icon-question-circle:before {
-  content: "\e87d"; }
-
-.icon-redo:before {
-  content: "\e861"; }
-
-.icon-search:before {
-  content: "\e86f"; }
-
-.icon-spell-check:before {
-  content: "\e838"; }
-
-.icon-star:before {
-  content: "\e814"; }
-
-.icon-star-half:before {
-  content: "\e815"; }
-
-.icon-star-empty:before {
-  content: "\e816"; }
-
-.icon-sync:before {
-  content: "\e862"; }
-
-.icon-tag:before {
-  content: "\e82f"; }
-
-.icon-text-align-left:before {
-  content: "\e898"; }
-
-.icon-text-align-center:before {
-  content: "\e899"; }
-
-.icon-text-align-right:before {
-  content: "\e89a"; }
-
-.icon-text-align-justify:before {
-  content: "\e89b"; }
-
-.icon-trash:before {
-  content: "\e811"; }
-
-.icon-undo:before {
-  content: "\e860"; }
-
-.icon-unlink:before {
-  content: "\e86c"; }
-
-.icon-upload:before {
-  content: "\e866"; }
-
-.icon-user:before {
-  content: "\e82a"; }
-
-.icon-user-md:before {
   content: "\e900"; }
 
-.icon-wheelchair:before {
-  content: "\e851"; }
+.icon-arrow-right:before {
+  content: "\e901"; }
+
+.icon-chevron-up:before {
+  content: "\e907"; }
+
+.icon-chevron-right:before {
+  content: "\e908"; }
+
+.icon-chevron-left:before {
+  content: "\e909"; }
+
+.icon-chevron-down:before {
+  content: "\e90a"; }
+
+.icon-menu:before {
+  content: "\e902"; }
+
+.icon-print:before {
+  content: "\e905"; }
+
+.icon-remove-square:before {
+  content: "\e903"; }
+
+.icon-search:before {
+  content: "\e904"; }
+
+.icon-user-md:before {
+  content: "\e906"; }
 
 .box-panel, .main-container, .login-form {
   background: #fff;
@@ -228,6 +76,55 @@ i[class*="icon-"] {
           border-radius: 10px 7px 7px 7px;
   -webkit-box-shadow: 0 0 20px 1px rgba(0, 0, 0, 0.15);
           box-shadow: 0 0 20px 1px rgba(0, 0, 0, 0.15); }
+
+.table-wrap {
+  border: 1px solid #e0e0e0;
+  -webkit-border-radius: 6px;
+          border-radius: 6px;
+  font-size: 18px;
+  font-size: 1.8rem;
+  font-family: hn, arial, serif; }
+  .table-wrap .table {
+    margin-bottom: 0; }
+    .table-wrap .table tr {
+      cursor: default; }
+      .table-wrap .table tr:first-child td:first-child {
+        -webkit-border-top-left-radius: 6px;
+                border-top-left-radius: 6px; }
+      .table-wrap .table tr:first-child td:last-child {
+        -webkit-border-top-right-radius: 6px;
+                border-top-right-radius: 6px; }
+      .table-wrap .table tr:last-child td:first-child {
+        -webkit-border-bottom-left-radius: 6px;
+                border-bottom-left-radius: 6px; }
+      .table-wrap .table tr:last-child td:last-child {
+        -webkit-border-bottom-right-radius: 6px;
+                border-bottom-right-radius: 6px; }
+    .table-wrap .table td {
+      vertical-align: middle;
+      padding: 15px;
+      padding: 1.5rem; }
+    .table-wrap .table .table__record-info span + span {
+      margin-left: 20px;
+      margin-left: 2rem;
+      color: #7d7d7d; }
+    .table-wrap .table .table__record-icon,
+    .table-wrap .table .table__record-remove {
+      width: 1px;
+      padding: 0 30px;
+      padding: 0 3rem;
+      font-size: 32px;
+      font-size: 3.2rem;
+      color: #494949; }
+    .table-wrap .table .table__record-remove button {
+      opacity: .5;
+      -webkit-transition: opacity .3s;
+      -o-transition: opacity .3s;
+      transition: opacity .3s; }
+      .table-wrap .table .table__record-remove button:hover {
+        opacity: .8; }
+  .table-wrap tbody tr:first-child td {
+    border-top: 0; }
 
 /* * Bootstrap v3.3.6 */
 /*! normalize.css v3.0.3 | MIT License | github.com/necolas/normalize.css */
@@ -498,6 +395,10 @@ textarea {
   font-family: inherit;
   font-size: inherit;
   line-height: inherit; }
+
+button {
+  padding: 0;
+  cursor: pointer; }
 
 a {
   color: inherit;
@@ -4231,6 +4132,8 @@ body {
   overflow: auto; }
 
 .page__footer {
+  display: table;
+  width: 100%;
   position: absolute;
   bottom: 0;
   left: 0;
@@ -4238,10 +4141,7 @@ body {
   height: 80px;
   height: 8rem;
   padding: 0 30px;
-  padding: 0 3rem;
-  display: table;
-  width: 100%;
-  overflow: hidden; }
+  padding: 0 3rem; }
   .page__footer > * {
     display: table-cell;
     vertical-align: bottom; }

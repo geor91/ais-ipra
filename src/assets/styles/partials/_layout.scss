@@ -119,12 +119,12 @@ body {
 	overflow: auto;
 }
 .page__footer {
+	@include table(bottom);
 	position: absolute;
 	bottom: 0;
 	left: 0;
 	width: 100%;
 	@include rem(height, $content-footer_h);
 	@include rem(padding, 0 $content-padding);
-	@include table(bottom);
-	overflow: hidden;
+	// overflow: hidden;
 }

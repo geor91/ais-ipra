@@ -44,9 +44,22 @@ block content
 					.col-md-1.col-sm-2.form-group.form-group-action.text-right
 						button.btn.btn-primary.btn-lg.btn-block(tabindex="104")
 							i.icon-search
+
 			.page__body
-				- for (var i=0; i<24; i++)
-					p body <br>
+				.table-wrap
+					table.table.table-striped.table-hover
+						-for (var i=0; i<7; i++)
+							tr
+								td.table__record-icon
+									i.icon-menu
+								td.table__record-info
+									.table__record-dates
+										span 3.4.15/2016
+										span.span-light от 11.02.2016
+									.table__record-name № 2.4.15/16 Петров Викентий Сидорович
+								td.table__record-remove
+									button.icon-remove-square
+
 			.page__footer
 				.text-right
 					button.btn.btn-primary.btn-lg.btn-round(disabled)
