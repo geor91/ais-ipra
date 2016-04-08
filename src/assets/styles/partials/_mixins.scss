@@ -109,3 +109,10 @@
 			@include rem(font-size, 16px);
 		}
 	}
+
+// BOX PANEL MIXIN
+	@mixin box-panel ($radius...) {
+		background: #fff;
+		border-radius: $radius;
+		box-shadow: 0 0 20px 1px rgba(0,0,0, .15);
+	}
