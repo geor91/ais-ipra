@@ -3982,7 +3982,8 @@ body {
   -webkit-border-radius: 10px 7px 7px 7px;
           border-radius: 10px 7px 7px 7px;
   -webkit-box-shadow: 0 0 20px 1px rgba(0, 0, 0, 0.15);
-          box-shadow: 0 0 20px 1px rgba(0, 0, 0, 0.15); }
+          box-shadow: 0 0 20px 1px rgba(0, 0, 0, 0.15);
+  overflow: hidden; }
 
 .main-content {
   position: absolute;
@@ -3996,7 +3997,6 @@ body {
   -o-transition: transform .3s, -o-transform .3s;
   transition: transform .3s;
   transition: transform .3s, -webkit-transform .3s, -o-transform .3s;
-  overflow: hidden;
   font-size: 0; }
   .main-content > * {
     display: inline-block;
