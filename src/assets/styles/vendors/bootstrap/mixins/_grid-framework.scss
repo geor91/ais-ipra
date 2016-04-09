@@ -25,10 +25,8 @@
     $list: "#{$list}, .col-#{$class}-#{$i}";
   }
   #{$list} {
-    // float: left;
-    display: inline-block;
-    vertical-align: top;
-    @include rem(font-size, 16px);
+    float: left;
+    display: block;
   }
 }
 
@@ -76,7 +74,7 @@
 
 // Create grid for specific class
 @mixin make-grid($class) {
-  @include float-grid-columns($class);
+  // @include float-grid-columns($class);
   @include loop-grid-columns($grid-columns, $class, width);
   @include loop-grid-columns($grid-columns, $class, pull);
   @include loop-grid-columns($grid-columns, $class, push);

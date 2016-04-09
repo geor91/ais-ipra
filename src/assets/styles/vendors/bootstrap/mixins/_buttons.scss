@@ -3,35 +3,47 @@
 // Easily pump out default styles, as well as :hover, :focus, :active,
 // and disabled options for all buttons
 
-@mixin button-variant($color, $background, $border) {
-  color: $color;
-  background-color: $background;
+// -AIS- //
+// validate darken values ('darken value' must be in [0%, 100%])
+// if ('darken value' * 2 > 100%) sass compiler will return error
+@function darken-validator($darken-percent){
+  @if $darken-percent > 50% {
+    @return 100%;
+  }
+  @else {
+    @return $darken-percent*2;
+  }
+}
+
+@mixin button-variant($color, $bg, $border, $color-darken: 0%, $bg-darken: 10%, $bd-darken: 12%) {
+  color:  $color;
+  background-color: $bg;
   border-color: $border;
 
   &:focus,
   &.focus {
-    color: $color;
-    background-color: darken($background, 10%);
-        border-color: darken($border, 25%);
+    color:  darken($color, darken-validator($color-darken));
+    background-color: darken($bg, $bg-darken);
+        border-color: darken($border, darken-validator($bd-darken));
   }
   &:hover {
-    color: $color;
-    background-color: darken($background, 10%);
-        border-color: darken($border, 12%);
+    color:  darken($color, darken-validator($color-darken));
+    background-color: darken($bg, $bg-darken);
+        border-color: darken($border, $bd-darken);
   }
   &:active,
   &.active,
   .open > &.dropdown-toggle {
-    color: $color;
-    background-color: darken($background, 10%);
-        border-color: darken($border, 12%);
+    color:  darken($color, darken-validator($color-darken));
+    background-color: darken($bg, $bg-darken);
+        border-color: darken($border, $bd-darken);
 
     &:hover,
     &:focus,
     &.focus {
-      color: $color;
-      background-color: darken($background, 17%);
-          border-color: darken($border, 25%);
+      color:  darken($color, darken-validator($color-darken));
+      background-color: darken($bg, darken-validator($bg-darken));
+          border-color: darken($border, darken-validator($bd-darken));
     }
   }
   &:active,
@@ -45,13 +57,13 @@
     &:hover,
     &:focus,
     &.focus {
-      background-color: $background;
+      background-color: $bg;
           border-color: $border;
     }
   }
 
   .badge {
-    color: $background;
+    color: $bg;
     background-color: $color;
   }
 }

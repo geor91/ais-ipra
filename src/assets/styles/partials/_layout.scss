@@ -49,7 +49,6 @@ body {
 	width: 100%;
 	white-space: nowrap;
 	transition: transform .3s;
-	// overflow: hidden;
 	@include cols();
 
 	& > * {
@@ -63,69 +62,112 @@ body {
 		white-space: normal;
 	}
 
-.page {
-	position: relative;
-	width: 100%;
-	height: 100%;
-}
-.page__sidebar {
-	position: absolute;
-	@include rem(top, $content-padding);
-	left: 0;
-	@include rem(bottom, $content-padding);
-	width: 26%;
-	@include rem(padding, 0 $content-padding);
-	border-right: 1px solid $color-gray-3;
-	overflow: auto;
-}
-.page__content {
-	position: absolute;
-	@include rem(top, $content-padding);
-	right: 0;
-	@include rem(bottom, $content-padding);
-	width: 100%;
-	overflow: auto;
-}
-	.page__sidebar + .page__content {
-		width: 74%;
+// PAGE LAYOUT
+	.page {
+		position: relative;
+		width: 100%;
+		height: 100%;
 	}
-	.page__content + .page__sidebar {
-		border-right: 0;
-		border-left: 1px solid $color-gray-3;
+	.page__sidebar,
+	.page__backward {
+		position: absolute;
+		@include rem(top, $content-gutter);
+		left: 0;
+		@include rem(bottom, $content-gutter);
+		width: $sidebar-width;
+		@include rem(padding, 0 $content-gutter);
+		border-right: 1px solid $color-gray-3;
+		overflow: auto;
 	}
+		.page__backward {
+			width: $backward-width;
+			padding: 0;
+			color: $color-gray-1;
+			text-align: center;
+			cursor: pointer;
 
-.page__header {
-	position: absolute;
-	top: 0;
-	left: 0;
-	width: 100%;
-	@include rem(height, $content-header_h);
-	@include rem(padding, 0 $content-padding);
-	overflow: hidden;
-}
-	.page__title {
-		@include rem(margin, 0 0 20px);
-		white-space: nowrap;
+			.page__backward-icon {
+				position: absolute;
+				top: 2px;
+				left: 50%;
+				@include rem(margin-left, -10px);
+				@include rem(font-size, 25px);
+			}
+			&:hover {
+				color: darken($color-gray-1, 20%);
+			}
+		}
+	.page__content {
+		position: absolute;
+		@include rem(top, $content-gutter);
+		right: 0;
+		@include rem(bottom, $content-gutter);
+		left: 0;
+		@include rem(padding, 0 $content-gutter);
+		overflow: auto;
+	}
+		.page__sidebar + .page__content {
+			left: $sidebar-width;
+		}
+		.page__content + .page__sidebar {
+			border-right: 0;
+			border-left: 1px solid $color-gray-3;
+		}
+		.page__backward + .page__content {
+			left: $backward-width;
+		}
+
+	.page__header {
+		position: absolute;
+		top: 0;
+		left: 0;
+		width: 100%;
+		@include rem(height, $content-header-height);
+		@include rem(padding, 0 $content-gutter);
 		overflow: hidden;
-		text-overflow: ellipsis;
+	}
+		.page__header_compact {
+			@include rem(height, $content-header-height_compact);
+		}
+		.page__title {
+			@include rem(margin, 0 0 20px);
+			white-space: nowrap;
+			overflow: hidden;
+			text-overflow: ellipsis;
+		}
+		.page__subtitle {
+			margin: 0;
+			@include font-family(hn);
+			font-size: 16px;
+			color: $color-gray-2;
+		}
+	.page__body {
+		position: absolute;
+		top: 0;
+		left: 0;
+		bottom: 0;
+		width: 100%;
+		@include rem(padding, 0 $content-gutter);
+		overflow: auto;
 	}
 
-.page__body {
-	position: absolute;
-	@include rem(top, $content-header_h);
-	left: 0;
-	@include rem(bottom, $content-footer_h);
-	width: 100%;
-	@include rem(padding, 0 $content-padding);
-	overflow: auto;
-}
-.page__footer {
-	@include table(bottom);
-	position: absolute;
-	bottom: 0;
-	left: 0;
-	width: 100%;
-	@include rem(height, $content-footer_h);
-	@include rem(padding, 0 $content-padding);
-	// overflow: hidden;
-}
+	.page__footer {
+		position: absolute;
+		bottom: 0;
+		left: 0;
+		right: 0;
+		@include rem(height, $content-footer-height);
+		@include rem(padding, 0 $content-gutter);
+	}
+
+		.page__header ~ .page__body {
+			@include rem(top, $content-header-height);
+		}
+		.page__header_compact ~ .page__body {
+			@include rem(top, $content-header-height_compact);
+		}
+		// .page__footer должен идти перед .page__body
+		.page__footer ~ .page__body {
+			@include rem(bottom, $content-footer-height);
+		}
+// -----------

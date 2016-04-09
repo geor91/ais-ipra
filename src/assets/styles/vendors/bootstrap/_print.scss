@@ -20,7 +20,7 @@
         text-decoration: underline;
     }
 
-    a[href]:after {
+    a[href^="http://"]:after {
         content: " (" attr(href) ")";
     }
 
@@ -98,4 +98,8 @@
     }
 
     // Bootstrap specific changes end
+    // .form-control {
+    //     border: 0 !important;
+    //     border-bottom: 1px solid #000 !important;
+    // }
 }

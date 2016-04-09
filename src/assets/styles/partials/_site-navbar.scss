@@ -1,7 +1,7 @@
-$navbar-submenu-padding: $content-padding + $navbar-submenu-padding;
+$navbar-submenu-gutter: $content-gutter + $navbar-submenu-gutter;
 
 .site-navbar {
-	@include rem(margin, 0 (-$content-padding));
+	@include rem(margin, 0 (-$content-gutter));
 	@include font-family(os400);
 
 	ul {
@@ -23,7 +23,7 @@ $navbar-submenu-padding: $content-padding + $navbar-submenu-padding;
 
 			> a {
 				display: block;
-				@include rem(padding, 10px $content-padding 10px $navbar-submenu-padding);
+				@include rem(padding, 10px $content-gutter 10px $navbar-submenu-gutter);
 				border-left: 8px solid #fff;
 				border-left: .8rem solid #fff;
 				transition: background .3s, border-color .3s;
@@ -45,7 +45,7 @@ $navbar-submenu-padding: $content-padding + $navbar-submenu-padding;
 	}
 }
 .nav-section__title {
-	@include rem(padding-left, $content-padding);
+	@include rem(padding-left, $content-gutter);
 }
 .nav-section {
 	@include rem(margin-bottom, 25px);

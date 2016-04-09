@@ -42,23 +42,37 @@
   .row {
     font-size: 0;
   }
-}
-.row-union {
-  [class*="col-"] {
-    padding-right: 5px;
-  }
-  [class*="col-"] + [class*="col-"] {
-    padding-left: 5px;
+  & > * {
+    @include rem(font-size, 16px);
   }
 }
-
+  .row_compact {
+    [class*="col-"] {
+      padding-right: 5px;
+    }
+    [class*="col-"] + [class*="col-"] {
+      padding-left: 5px;
+    }
+    [class*="col-"]:last-of-type {
+      @include rem(padding-right, $grid-gutter-width/2);
+    }
+  }
 
 // Columns
 //
 // Common styles for small and large grid columns
 
-@include make-grid-columns;
-
+// @include make-grid-columns;
+// заменим стандартные бутстреповский колонки на свои
+[class*="col-"] {
+  position: relative;
+  display: inline-block;
+  vertical-align: middle;
+  @include rem(font-size, 16px);
+  min-height: 1px;
+  @include rem( padding-left,  ceil(($grid-gutter-width / 2)) );
+  @include rem( padding-right, floor(($grid-gutter-width / 2)) );
+}
 
 // Extra small grid
 //

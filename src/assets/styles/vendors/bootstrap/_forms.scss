@@ -119,6 +119,7 @@ output {
   width: 100%;
   @include rem(height, $input-height-base); // Make inputs at least the height of their button counterpart (base line-height + padding + border)
   @include rem(padding, $padding-base-vertical $padding-base-horizontal);
+  @include font-family(hn);
   @include rem(font-size, $font-size-base);
   line-height: $line-height-base;
   color: $input-color;
@@ -216,7 +217,7 @@ input[type="search"] {
 // horizontal forms, use the predefined grid classes.
 
 .form-group {
-  margin-bottom: $form-group-margin-bottom;
+  @include rem(margin-bottom, $form-group-margin-bottom);
 }
 
 
@@ -494,6 +495,12 @@ input[type="checkbox"] {
       display: inline-block;
       width: auto; // Prevent labels from stacking above inputs in `.form-group`
       vertical-align: middle;
+      @include rem(width, 150px);
+      &.col-auto {
+      }
+    }
+    label + .form-control {
+      @include rem(margin-left, $grid-gutter-width/2);
     }
 
     // Make static controls behave like regular ones

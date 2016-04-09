@@ -1,4 +1,7 @@
-if (initsJS) {
-	initsJS = '1';
-	console.log(initsJS);
-}
+$('.page__backward').on('click', function() {
+	$('.main-content').removeClass('main-content_scrolled');
+});
+
+$('.table-wrap tr').on('click', function() {
+	$('.main-content').addClass('main-content_scrolled');
+});

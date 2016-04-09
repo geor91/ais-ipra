@@ -14,17 +14,19 @@
 
 // COMMON
 	$base-font-size: 10px;
-	$content-padding: 30px;
 	$panel-bd-radius: 7px;
 
-// HEADER
+// SIZES
 	$logo-size: 120px;
 	$logo-size-lg: 190px;
 	$header-height: $logo-size;
+	$sidebar-width: 26%;
+	$backward-width: 70px;
 
-// NAVBAR
-	$navbar-submenu-padding: 24px;
-
-// CONTENT
-	$content-header_h: 135px;
-	$content-footer_h: 80px;
+// GUTTERS
+	$navbar-submenu-gutter: 24px;
+	$content-gutter: 30px;
+	$content-header-height: 135px;
+	$content-header-height_compact: 80px;
+	$content-footer-height: 80px;
+	$document-content-gutter: 80px;
