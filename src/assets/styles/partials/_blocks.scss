@@ -163,10 +163,16 @@
 		@include v-align();
 	}
 		.toolbar_va-middle {
-			@include v-align(middle);
+			&:before,
+			& > * {
+				vertical-align: middle;
+			}
 		}
 		.toolbar_va-bottom {
-			@include v-align(bottom);
+			&:before,
+			& > * {
+				vertical-align: bottom;
+			}
 		}
 		.toolbar_max-height {
 			height: 100%;

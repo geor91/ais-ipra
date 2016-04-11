@@ -1,23 +1,19 @@
 @charset "UTF-8";
 @font-face {
   font-family: "icons";
-  src: url("../fonts/ais-icons/font.eot#iefix");
-  src: url("../fonts/ais-icons/font.eot") format("embedded-opentype"), url("../fonts/ais-icons/font.ttf") format("truetype"), url("../fonts/ais-icons/font.woff") format("woff"), url("../fonts/ais-icons/font.woff2") format("woff2"), url("../fonts/ais-icons/font.svg") format("svg"); }
+  src: url("../fonts/ais-icons/font.eot?iefix") format("embedded-opentype"), url("../fonts/ais-icons/font.ttf") format("truetype"), url("../fonts/ais-icons/font.woff") format("woff"), url("../fonts/ais-icons/font.woff2") format("woff2"), url("../fonts/ais-icons/font.svg") format("svg"); }
 
 @font-face {
   font-family: "hn";
-  src: url("../fonts/hn-medium/font.eot#iefix");
-  src: url("../fonts/hn-medium/font.eot") format("embedded-opentype"), url("../fonts/hn-medium/font.ttf") format("truetype"), url("../fonts/hn-medium/font.woff") format("woff"), url("../fonts/hn-medium/font.woff2") format("woff2"), url("../fonts/hn-medium/font.svg") format("svg"); }
+  src: url("../fonts/hn-medium/font.eot?iefix") format("embedded-opentype"), url("../fonts/hn-medium/font.ttf") format("truetype"), url("../fonts/hn-medium/font.woff") format("woff"), url("../fonts/hn-medium/font.woff2") format("woff2"), url("../fonts/hn-medium/font.svg") format("svg"); }
 
 @font-face {
   font-family: "os300";
-  src: url("../fonts/open-sans-300/font.eot#iefix");
-  src: url("../fonts/open-sans-300/font.eot") format("embedded-opentype"), url("../fonts/open-sans-300/font.ttf") format("truetype"), url("../fonts/open-sans-300/font.woff") format("woff"), url("../fonts/open-sans-300/font.woff2") format("woff2"), url("../fonts/open-sans-300/font.svg") format("svg"); }
+  src: url("../fonts/open-sans-300/font.eot?iefix") format("embedded-opentype"), url("../fonts/open-sans-300/font.ttf") format("truetype"), url("../fonts/open-sans-300/font.woff") format("woff"), url("../fonts/open-sans-300/font.woff2") format("woff2"), url("../fonts/open-sans-300/font.svg") format("svg"); }
 
 @font-face {
   font-family: "os400";
-  src: url("../fonts/open-sans-400/font.eot#iefix");
-  src: url("../fonts/open-sans-400/font.eot") format("embedded-opentype"), url("../fonts/open-sans-400/font.ttf") format("truetype"), url("../fonts/open-sans-400/font.woff") format("woff"), url("../fonts/open-sans-400/font.woff2") format("woff2"), url("../fonts/open-sans-400/font.svg") format("svg"); }
+  src: url("../fonts/open-sans-400/font.eot?iefix") format("embedded-opentype"), url("../fonts/open-sans-400/font.ttf") format("truetype"), url("../fonts/open-sans-400/font.woff") format("woff"), url("../fonts/open-sans-400/font.woff2") format("woff2"), url("../fonts/open-sans-400/font.svg") format("svg"); }
 
 [class*="icon-"] {
   background: none;
@@ -379,7 +375,6 @@ img {
           border-radius: 2px;
   -webkit-transition: all 0.2s ease-in-out;
   -o-transition: all 0.2s ease-in-out;
-  -moz-transition: all 0.2s ease-in-out;
   transition: all 0.2s ease-in-out;
   display: inline-block;
   max-width: 100%;
@@ -1639,7 +1634,6 @@ output {
   -o-transition: border-color ease-in-out 0.15s, box-shadow ease-in-out 0.15s;
   -webkit-transition: border-color ease-in-out 0.15s, -webkit-box-shadow ease-in-out 0.15s;
   transition: border-color ease-in-out 0.15s, -webkit-box-shadow ease-in-out 0.15s;
-  -moz-transition: border-color ease-in-out 0.15s, box-shadow ease-in-out 0.15s;
   transition: border-color ease-in-out 0.15s, box-shadow ease-in-out 0.15s;
   transition: border-color ease-in-out 0.15s, box-shadow ease-in-out 0.15s, -webkit-box-shadow ease-in-out 0.15s; }
   .form-control:focus {
@@ -2472,7 +2466,6 @@ input[type="button"].btn-block {
   opacity: 0;
   -webkit-transition: opacity 0.15s linear;
   -o-transition: opacity 0.15s linear;
-  -moz-transition: opacity 0.15s linear;
   transition: opacity 0.15s linear; }
   .fade.in {
     opacity: 1; }
@@ -2493,17 +2486,14 @@ tbody.collapse.in {
   height: 0;
   overflow: hidden;
   -webkit-transition-property: height, visibility;
-  -moz-transition-property: height, visibility;
   -o-transition-property: height, visibility;
   transition-property: height, visibility;
   -webkit-transition-duration: 0.35s;
-  -moz-transition-duration: 0.35s;
-    -o-transition-duration: 0.35s;
-       transition-duration: 0.35s;
+  -o-transition-duration: 0.35s;
+     transition-duration: 0.35s;
   -webkit-transition-timing-function: ease;
-  -moz-transition-timing-function: ease;
-    -o-transition-timing-function: ease;
-       transition-timing-function: ease; }
+  -o-transition-timing-function: ease;
+     transition-timing-function: ease; }
 
 .caret {
   display: inline-block;
@@ -2543,8 +2533,7 @@ tbody.collapse.in {
           border-radius: 2px;
   -webkit-box-shadow: 0 6px 12px rgba(0, 0, 0, 0.175);
   box-shadow: 0 6px 12px rgba(0, 0, 0, 0.175);
-  -o-background-clip: padding-box;
-     background-clip: padding-box; }
+  background-clip: padding-box; }
   .dropdown-menu.pull-right {
     right: 0;
     left: auto; }
@@ -3958,7 +3947,6 @@ body {
   background-color: #65b6a9;
   background-image: -webkit-gradient(linear, left top, left bottom, from(#65b6a9), to(#41b6a6));
   background-image: -webkit-linear-gradient(#65b6a9 0%, #41b6a6 100%);
-  background-image: -moz-linear-gradient(#65b6a9 0%, #41b6a6 100%);
   background-image: -o-linear-gradient(#65b6a9 0%, #41b6a6 100%);
   background-image: linear-gradient(#65b6a9 0%, #41b6a6 100%);
   font-family: os400, arial, serif; }
@@ -3966,7 +3954,6 @@ body {
 .main-wrap {
   padding: 40px;
   padding: 4rem;
-  overflow: auto;
   font-size: 0;
   text-align: center; }
   .main-wrap:before {
@@ -4002,12 +3989,6 @@ body {
   bottom: 0;
   width: 100%;
   white-space: nowrap;
-  -webkit-transition: -webkit-transform .3s;
-  transition: -webkit-transform .3s;
-  -moz-transition: transform .3s, -moz-transform .3s;
-  -o-transition: transform .3s, -o-transform .3s;
-  transition: transform .3s;
-  transition: transform .3s, -webkit-transform .3s, -moz-transform .3s, -o-transform .3s;
   font-size: 0; }
   .main-content > * {
     display: inline-block;
@@ -4016,20 +3997,18 @@ body {
   .main-content > * {
     white-space: normal; }
 
-.main-content_scrolled {
-  -webkit-transform: translate(-100%);
-     -moz-transform: translate(-100%);
-      -ms-transform: translate(-100%);
-       -o-transform: translate(-100%);
-          transform: translate(-100%); }
-
 .main-content_tile {
   white-space: normal; }
 
 .page {
   position: relative;
   width: 100%;
-  height: 100%; }
+  height: 100%;
+  -webkit-transition: margin .25s ease;
+  -o-transition: margin .25s ease;
+  transition: margin .25s ease; }
+  .page_hidden {
+    margin-left: -100%; }
 
 .page__sidebar,
 .page__backward {
@@ -4051,6 +4030,8 @@ body {
   color: #979797;
   text-align: center;
   cursor: pointer; }
+  .page__backward:hover {
+    color: #646464; }
   .page__backward .page__backward-icon {
     position: absolute;
     top: 2px;
@@ -4059,8 +4040,6 @@ body {
     margin-left: -1rem;
     font-size: 25px;
     font-size: 2.5rem; }
-  .page__backward:hover {
-    color: #646464; }
 
 .page__content {
   position: absolute;
@@ -4072,7 +4051,7 @@ body {
   left: 0;
   padding: 0 30px;
   padding: 0 3rem;
-  overflow: auto; }
+  overflow: hidden; }
 
 .page__sidebar + .page__content {
   left: 26%; }
@@ -4188,7 +4167,6 @@ header {
         border-left: 8px solid #fff;
         border-left: .8rem solid #fff;
         -webkit-transition: background .3s, border-color .3s;
-        -moz-transition: background .3s, border-color .3s;
         -o-transition: background .3s, border-color .3s;
         transition: background .3s, border-color .3s; }
         .site-navbar li li > a:hover, .site-navbar li li > a:focus, .site-navbar li li > a.active {
@@ -4230,12 +4208,10 @@ header {
   width: 120px;
   width: 12rem;
   background: #65b6a9 url("../images/logo.png") no-repeat center;
-  -o-background-size: 6.4rem;
-     background-size: 6.4rem;
+  background-size: 6.4rem;
   cursor: pointer;
   -webkit-transition: background-color .3s, -webkit-box-shadow .3s;
   transition: background-color .3s, -webkit-box-shadow .3s;
-  -moz-transition: background-color .3s, box-shadow .3s;
   -o-transition: background-color .3s, box-shadow .3s;
   transition: background-color .3s, box-shadow .3s;
   transition: background-color .3s, box-shadow .3s, -webkit-box-shadow .3s; }
@@ -4270,7 +4246,6 @@ header {
     margin-left: 20px;
     margin-left: 2rem;
     -webkit-transition: color .3s;
-    -moz-transition: color .3s;
     -o-transition: color .3s;
     transition: color .3s; }
 
@@ -4279,7 +4254,6 @@ header {
   font-size: 2rem;
   color: rgba(0, 0, 0, 0.3);
   -webkit-transition: color .3s;
-  -moz-transition: color .3s;
   -o-transition: color .3s;
   transition: color .3s; }
   .user-area__name:hover, .user-area__name:focus {
@@ -4347,14 +4321,12 @@ header {
     .table-wrap .table .table__record-remove button {
       opacity: .5;
       -webkit-transition: opacity .3s;
-      -moz-transition: opacity .3s;
       -o-transition: opacity .3s;
       transition: opacity .3s; }
       .table-wrap .table .table__record-remove button:hover {
         opacity: .8; }
 
 .toolbar {
-  overflow: auto;
   font-size: 0; }
   .toolbar:before {
     content: "";
@@ -4369,37 +4341,13 @@ header {
     font-size: 16px;
     font-size: 1.6rem; }
 
-.toolbar_va-middle {
-  overflow: auto;
-  font-size: 0; }
-  .toolbar_va-middle:before {
-    content: "";
-    display: inline-block;
-    height: 100%;
-    width: 1px;
-    vertical-align: middle;
-    margin-right: -1px; }
-  .toolbar_va-middle > * {
-    display: inline-block;
-    vertical-align: middle;
-    font-size: 16px;
-    font-size: 1.6rem; }
+.toolbar_va-middle:before,
+.toolbar_va-middle > * {
+  vertical-align: middle; }
 
-.toolbar_va-bottom {
-  overflow: auto;
-  font-size: 0; }
-  .toolbar_va-bottom:before {
-    content: "";
-    display: inline-block;
-    height: 100%;
-    width: 1px;
-    vertical-align: bottom;
-    margin-right: -1px; }
-  .toolbar_va-bottom > * {
-    display: inline-block;
-    vertical-align: bottom;
-    font-size: 16px;
-    font-size: 1.6rem; }
+.toolbar_va-bottom:before,
+.toolbar_va-bottom > * {
+  vertical-align: bottom; }
 
 .toolbar_max-height {
   height: 100%; }

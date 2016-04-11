@@ -2,12 +2,11 @@
 	@mixin font-face ($font-name, $file-name) {
 		@font-face {
 			font-family: $font-name;
-			src: url('../fonts/#{$file-name}/font.eot#iefix');
-			src: url('../fonts/#{$file-name}/font.eot') format('embedded-opentype'),
-				 url('../fonts/#{$file-name}/font.ttf') format('truetype'),
-				 url('../fonts/#{$file-name}/font.woff') format('woff'),
-				 url('../fonts/#{$file-name}/font.woff2') format('woff2'),
-				 url('../fonts/#{$file-name}/font.svg') format('svg');
+			src: url('../fonts/#{$file-name}/font.eot?iefix') format('embedded-opentype'),
+			     url('../fonts/#{$file-name}/font.ttf') format('truetype'),
+			     url('../fonts/#{$file-name}/font.woff') format('woff'),
+			     url('../fonts/#{$file-name}/font.woff2') format('woff2'),
+			     url('../fonts/#{$file-name}/font.svg') format('svg');
 		}
 	}
 
@@ -91,8 +90,6 @@
 
 // VERTICAL ALIGN MIXIN
 	@mixin v-align ($value: middle) {
-		// position: relative;
-		overflow: auto;
 		font-size: 0;
 
 		&:before {

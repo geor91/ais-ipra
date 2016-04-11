@@ -1,15 +1,8 @@
 doctype html
 html
 	head
-		title AIS
-		meta(charset="UTF-8")
-		meta(name="viewport" content="width=device-width, initial-scale=1")
-		link(rel="stylesheet", href="assets/styles/style.css")
-		block head
+		include ../includes/head.jade
 	body
 		.main-wrap
 			block content
-
-		script(src="assets/scripts/vendor.js")
-		script(src="assets/scripts/app.js")
-		block scripts
+		include ../includes/foot.jade

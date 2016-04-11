@@ -1,0 +1,58 @@
+script#page2tmp(type="x-template")
+	.page#page2
+		.page__backward.js-ajax-link
+			.page__backward-icon.icon-chevron-left
+		.page__content
+			.page__header.page__header_compact
+				.page__subtitle Выписка из индивидуальной программы реабилитации № 2.4.2016 от 11.10.2016
+				.text-right
+					button.btn.btn-lg.btn-primary
+						i.icon-print
+			.page__footer
+				.toolbar.toolbar_va-bottom.toolbar_max-height.text-right
+					button.toolbar__item.btn.btn-default.btn-lg Отмена
+					button.toolbar__item.btn.btn-primary.btn-lg Сохранить
+			.page__body
+				.document
+					.document__title.text-center
+						h2 Выписка из индивидуальной программы реабилитации
+							.form-group.form-group-lg.form-inline
+								.col-auto
+									span №
+									input.form-control.text-center(type="text", value="1234.23.22")
+								.col-auto
+									span от
+									input.form-control.text-center(type="text", value="09.04.2016")
+					.form-group.form-group-lg
+						input.form-control(type="text")
+						.input-note (наименование и адрес федерального государственного учреждения медико-социальной экспертизы, в которое отправляется информация об исполнении мероприятий, предусмотренных индивидуальной программой реабилитации или абилитации инвалида и индивидуальной программой реабилитации или абилитации ребенка-инвалида)
+					.form-group.form-group-lg
+						input.form-control(type="text")
+						.input-note (наименование и адрес федерального государственного учреждения медико-социальной экспертизы, в которое отправляется информация об исполнении мероприятий, предусмотренных индивидуальной программой реабилитации или абилитации инвалида и индивидуальной программой реабилитации или абилитации ребенка-инвалида)
+
+					h3.text-center 1. Общие сведения об инвалиде (ребенке-инвалиде)
+					.form-group.form-group-lg.form-table
+						label 1. Фамилия Имя Отчество (при наличии):
+						.col-sm-12
+							input.form-control(type="text")
+					.form-group.form-group-lg.form-inline
+						.row.row_compact
+							.col-auto
+								label 2. Дата рождения: день
+								input.form-control(type="text")
+							.col-auto
+								label месяц
+								input.form-control(type="text")
+							.col-auto
+								label день
+								input.form-control(type="text")
+					.form-group.form-group-lg.form-inline
+						.row
+							.col-auto
+								label 3. Возраст: число полных лет (для ребенка в возрасте до 1 года число полных месяцев):
+								input.form-control(type="text")
+					.form-group.form-group-lg.form-inline
+						.row
+							label.col-sm-8 4. Адрес места жительства (при отсутствии места жительства указывается адрес места пребывания, фактического проживания на территории Росисйской Федерации, место нахождения пенсиооного дела инвалида (ребенка-инвалида), выехавшего на постоянное жительство за пределы Российской Федерации):
+							.col-auto
+								input.form-control(type="text")
